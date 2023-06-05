@@ -1,0 +1,1081 @@
+[
+    {
+        "id": "823c28719214a7e5",
+        "type": "tab",
+        "label": "Flow 6",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "533555e629a57ffa",
+        "type": "mqtt in",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "topic": "ICU/patient1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3b33b2e235c1c7a4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "d6ee2b30189f6f03",
+                "32802afe3d049c51",
+                "21ccb50367862ecb"
+            ]
+        ]
+    },
+    {
+        "id": "d6ee2b30189f6f03",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 22",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 60,
+        "wires": [
+            [
+                "5e77510cff7ed81d",
+                "b0be264ba9b94b1a"
+            ]
+        ]
+    },
+    {
+        "id": "32802afe3d049c51",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 23",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "9e204ecd48848013"
+            ]
+        ]
+    },
+    {
+        "id": "21ccb50367862ecb",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 24",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[2];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "ca8713593a0e64fb"
+            ]
+        ]
+    },
+    {
+        "id": "6a710f5a6bb02bca",
+        "type": "mqtt in",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "topic": "ICU/patient2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3b33b2e235c1c7a4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "95923cc2c509cdf2",
+                "46fa4f0ec5e56792",
+                "dc448d607ec92839"
+            ]
+        ]
+    },
+    {
+        "id": "95923cc2c509cdf2",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 25",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "4a878ab3193c9070"
+            ]
+        ]
+    },
+    {
+        "id": "46fa4f0ec5e56792",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 26",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "2de761c67101ccc9"
+            ]
+        ]
+    },
+    {
+        "id": "dc448d607ec92839",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 27",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[2];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 320,
+        "wires": [
+            [
+                "c1f69b52a4c7eb74"
+            ]
+        ]
+    },
+    {
+        "id": "5e77510cff7ed81d",
+        "type": "debug",
+        "z": "823c28719214a7e5",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a8771fdb397dc534",
+        "type": "mqtt in",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "topic": "ICU/patient3",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3b33b2e235c1c7a4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "6daeed4bab39558d",
+                "21cd429abb690681",
+                "accf155bcb3c1200"
+            ]
+        ]
+    },
+    {
+        "id": "6daeed4bab39558d",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 29",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 380,
+        "wires": [
+            [
+                "20fef44fc7c4f4d4"
+            ]
+        ]
+    },
+    {
+        "id": "21cd429abb690681",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 30",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 440,
+        "wires": [
+            [
+                "25596591dff5dd12"
+            ]
+        ]
+    },
+    {
+        "id": "accf155bcb3c1200",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 31",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[2];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 480,
+        "wires": [
+            [
+                "8177ba2696a1faa8"
+            ]
+        ]
+    },
+    {
+        "id": "b0be264ba9b94b1a",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "f994bc249fc1ae3a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "80",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "9e204ecd48848013",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "84a9ce43012c19fd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "ca8713593a0e64fb",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "12e85e36f1befa91",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "140",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4a878ab3193c9070",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "a20b7ff453fd1fa0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "70",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2de761c67101ccc9",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "fe5ed830968ca18e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 650,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c1f69b52a4c7eb74",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "a9a26eaca5af0b21",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "20fef44fc7c4f4d4",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "e9a873d28d2040bd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "70",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "25596591dff5dd12",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "d0150a766c86c885",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 650,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "8177ba2696a1faa8",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "02c4e020a38a0c73",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "140",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 650,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "73a99a333ed5ace5",
+        "type": "mqtt in",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "topic": "ICU/patient4",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3b33b2e235c1c7a4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 660,
+        "wires": [
+            [
+                "58a57b75de316aa5",
+                "2f492977040bdbba",
+                "cacf614312b3290d"
+            ]
+        ]
+    },
+    {
+        "id": "58a57b75de316aa5",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 32",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 600,
+        "wires": [
+            [
+                "5391893dbb6d86dc"
+            ]
+        ]
+    },
+    {
+        "id": "2f492977040bdbba",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 33",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "9e3b72b057815c7a"
+            ]
+        ]
+    },
+    {
+        "id": "cacf614312b3290d",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 34",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[2];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "79396e9bf3bb91ee"
+            ]
+        ]
+    },
+    {
+        "id": "5391893dbb6d86dc",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "08baefd56f2651d2",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "70",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9e3b72b057815c7a",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "2939c96398378165",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "79396e9bf3bb91ee",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "6adf9b7434efbe5f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "140",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "42a4e49f39e1be73",
+        "type": "mqtt in",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "topic": "ICU/patient5",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3b33b2e235c1c7a4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 900,
+        "wires": [
+            [
+                "c0a8d796d0a84683",
+                "4a2fe656eb94bf8b",
+                "37e6c33ae02500cd"
+            ]
+        ]
+    },
+    {
+        "id": "c0a8d796d0a84683",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 35",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 840,
+        "wires": [
+            [
+                "9e6e7d1c678b1e7c"
+            ]
+        ]
+    },
+    {
+        "id": "4a2fe656eb94bf8b",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 36",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[1];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 900,
+        "wires": [
+            [
+                "f3dd9568dff11333"
+            ]
+        ]
+    },
+    {
+        "id": "37e6c33ae02500cd",
+        "type": "function",
+        "z": "823c28719214a7e5",
+        "name": "function 37",
+        "func": "let text = msg.payload;\nconst myArray = text.split(\",\");\nmsg.payload = myArray[2];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 940,
+        "wires": [
+            [
+                "3c1f80240a3bc34b"
+            ]
+        ]
+    },
+    {
+        "id": "9e6e7d1c678b1e7c",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "f47a1cbaf51fc998",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "70",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "f3dd9568dff11333",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "35e34f34c0700a24",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "150",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "3c1f80240a3bc34b",
+        "type": "ui_gauge",
+        "z": "823c28719214a7e5",
+        "name": "",
+        "group": "b8e5c82313471c38",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "100",
+        "max": "140",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "3b33b2e235c1c7a4",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "nodemcu/temperature",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f994bc249fc1ae3a",
+        "type": "ui_group",
+        "name": "BPM",
+        "tab": "8e4a9f53d230b0cc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "84a9ce43012c19fd",
+        "type": "ui_group",
+        "name": "Blood Pressure",
+        "tab": "8e4a9f53d230b0cc",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "12e85e36f1befa91",
+        "type": "ui_group",
+        "name": "SPo2",
+        "tab": "8e4a9f53d230b0cc",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a20b7ff453fd1fa0",
+        "type": "ui_group",
+        "name": "BPM",
+        "tab": "43d2e3f5ecada478",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fe5ed830968ca18e",
+        "type": "ui_group",
+        "name": "Blood Pressure",
+        "tab": "43d2e3f5ecada478",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a9a26eaca5af0b21",
+        "type": "ui_group",
+        "name": "SPo2",
+        "tab": "43d2e3f5ecada478",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e9a873d28d2040bd",
+        "type": "ui_group",
+        "name": "BPM",
+        "tab": "7697ec293ac54c70",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d0150a766c86c885",
+        "type": "ui_group",
+        "name": "Blood Pressure",
+        "tab": "7697ec293ac54c70",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "02c4e020a38a0c73",
+        "type": "ui_group",
+        "name": "Spo2",
+        "tab": "7697ec293ac54c70",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "08baefd56f2651d2",
+        "type": "ui_group",
+        "name": "BPM",
+        "tab": "a2143f7cb455737a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2939c96398378165",
+        "type": "ui_group",
+        "name": "Blood Pressure",
+        "tab": "a2143f7cb455737a",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6adf9b7434efbe5f",
+        "type": "ui_group",
+        "name": "Spo2",
+        "tab": "a2143f7cb455737a",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f47a1cbaf51fc998",
+        "type": "ui_group",
+        "name": "BPM",
+        "tab": "f9a9122e59842f7e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "35e34f34c0700a24",
+        "type": "ui_group",
+        "name": "Blood Pressure",
+        "tab": "f9a9122e59842f7e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b8e5c82313471c38",
+        "type": "ui_group",
+        "name": "Spo2",
+        "tab": "f9a9122e59842f7e",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8e4a9f53d230b0cc",
+        "type": "ui_tab",
+        "name": "Patient 1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "43d2e3f5ecada478",
+        "type": "ui_tab",
+        "name": "Patient 2",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7697ec293ac54c70",
+        "type": "ui_tab",
+        "name": "Patient 3",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a2143f7cb455737a",
+        "type": "ui_tab",
+        "name": "Patient 4",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f9a9122e59842f7e",
+        "type": "ui_tab",
+        "name": "Patient 5",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
+
